@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toxa Ta'lim — Zamonaviy IT, Sun'iy Intellekt va Dizayn Onlayn Platformasi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="edu-header">
+    <div class="container nav-box">
+      <a href="#" class="brand-edu">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span>TOXA TA'LIM</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#courses">Barcha Kurslar</a>
+        <a href="#simulator">Interaktiv Darslik</a>
+        <a href="#mentors">Mentorlar</a>
+        <a href="#free-lesson">Bepul Sinov</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-outline" id="btnLogin">Kirish</button>
+        <button class="btn btn-primary" id="btnRegister">Ro'yxatdan O'tish</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="edu-hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <div class="badge-edu"><i class="fa-solid fa-sparkles"></i> 2026-yilning eng talabgir kasblari</div>
+        <h1>Kelajak Kasblarini <br><span class="edu-gradient">Amaliyotda O'rganing</span></h1>
+        <p>
+          Frontend, Backend, Sun'iy Intellekt va UI/UX Dizayn bo'yicha eng kuchli mutaxassislar bilan noldan xalqaro darajagacha. 92% bitiruvchilarimiz 3 oyda ishga joylashadi.
+        </p>
+        <div class="hero-actions">
+          <a href="#courses" class="btn btn-primary btn-lg">Kursni Tanlash <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#free-lesson" class="btn btn-outline-dark btn-lg">Birinchi Dars Bepul</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>18,500+</strong><span>Faol talabalar</span></div>
+          <div><strong>94%</strong><span>Tugatish darajasi</span></div>
+          <div><strong>50+</strong><span>Katta IT kompaniyalar bilan hamkorlik</span></div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="lesson-player-mock">
+          <div class="player-top">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <small>Dars #14: React 19 & Next.js Server Components</small>
+          </div>
+          <div class="player-screen">
+            <div class="code-editor-preview">
+              <span class="c-kw">export default async function</span> <span class="c-fn">Dashboard</span>() {<br>
+              &nbsp;&nbsp;<span class="c-kw">const</span> data = <span class="c-kw">await</span> getAnalytics();<br>
+              &nbsp;&nbsp;<span class="c-kw">return</span> &lt;<span class="c-tag">AnalyticsView</span> stats={data} /&gt;;<br>
+              }
+            </div>
+            <div class="mentor-video-bubble">👨‍💻</div>
+          </div>
+          <div class="player-controls">
+            <span><i class="fa-solid fa-play"></i> 14:20 / 28:00</span>
+            <span class="badge-done"><i class="fa-solid fa-check"></i> 85% o'zlashtirildi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Grid -->
+  <section class="section" id="courses">
+    <div class="container">
+      <div class="section-title text-center">
+        <span class="edu-sub">Yo'nalishlar</span>
+        <h2>Eng Ommabop Onlayn Kurslar</h2>
+      </div>
+
+      <div class="course-filter-pills">
+        <button class="pill active" data-cat="all">Barchasi</button>
+        <button class="pill" data-cat="frontend">Frontend Dasturlash</button>
+        <button class="pill" data-cat="ai">Python & Sun'iy Intellekt</button>
+        <button class="pill" data-cat="design">UI/UX Dizayn</button>
+      </div>
+
+      <div class="courses-grid">
+        <!-- Course 1 -->
+        <div class="course-card" data-cat="frontend">
+          <div class="course-badge">Eng Mashhur</div>
+          <div class="c-img c-fe"></div>
+          <div class="c-content">
+            <span class="c-level">Boshlang'ichdan Junior+ gacha</span>
+            <h3>Frontend Developer: React & TypeScript</h3>
+            <p>HTML5, Modern CSS, JavaScript ES6+, React, Next.js va TailwindCSS yordamida haqiqiy portfolio yaratish.</p>
+            <div class="c-meta">
+              <span><i class="fa-solid fa-clock"></i> 6 oy</span>
+              <span><i class="fa-solid fa-video"></i> 120+ dars</span>
+            </div>
+            <div class="c-footer">
+              <strong>$45 / oy</strong>
+              <button class="btn btn-sm btn-primary" onclick="enrollCourse('Frontend Developer')">Yozilish</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card" data-cat="ai">
+          <div class="course-badge">Trend</div>
+          <div class="c-img c-ai"></div>
+          <div class="c-content">
+            <span class="c-level">O'rta daraja</span>
+            <h3>Python, Data Science & Generativ AI</h3>
+            <p>PyTorch, LLM modellari, Prompt muhandisligi va sun'iy intellekt agentlarini biznesga tatbiq etish.</p>
+            <div class="c-meta">
+              <span><i class="fa-solid fa-clock"></i> 5 oy</span>
+              <span><i class="fa-solid fa-video"></i> 95+ dars</span>
+            </div>
+            <div class="c-footer">
+              <strong>$55 / oy</strong>
+              <button class="btn btn-sm btn-primary" onclick="enrollCourse('Python & AI')">Yozilish</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card" data-cat="design">
+          <div class="c-img c-ui"></div>
+          <div class="c-content">
+            <span class="c-level">Noldan boshlovchilar uchun</span>
+            <h3>Figma & Zamonaviy UI/UX Dizayn</h3>
+            <p>Foydalanuvchi tajribasi tadqiqotlari, Dizayn tizimlari (Design System) va Awwwards darajasidagi animatsiyalar.</p>
+            <div class="c-meta">
+              <span><i class="fa-solid fa-clock"></i> 4 oy</span>
+              <span><i class="fa-solid fa-video"></i> 70+ dars</span>
+            </div>
+            <div class="c-footer">
+              <strong>$40 / oy</strong>
+              <button class="btn btn-sm btn-primary" onclick="enrollCourse('UI/UX Dizayn')">Yozilish</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Trial Registration -->
+  <section class="section bg-light" id="free-lesson">
+    <div class="container">
+      <div class="free-trial-card">
+        <div class="text-center">
+          <span class="edu-sub">Imkoniyat</span>
+          <h2>Bepul Sinov Darsiga Yoziling</h2>
+          <p>O'zingiz qiziqqan yo'nalishni tanlang va birinchi modulni mutlaqo bepul o'rganing.</p>
+        </div>
+
+        <form class="trial-form" id="formTrial">
+          <input type="text" placeholder="Ismingiz" required class="input-fld">
+          <input type="tel" placeholder="Telefon raqamingiz (+998)" required class="input-fld">
+          <select class="input-fld">
+            <option>Frontend Dasturlash</option>
+            <option>Python & Sun'iy Intellekt</option>
+            <option>UI/UX Dizayn</option>
+          </select>
+          <button type="submit" class="btn btn-primary btn-block">Bepul Darsni Boshlash</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="edu-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>TOXA TA'LIM <span class="sub-badge">Platform</span></h3>
+        <p>Zamonaviy bilimlarni qulay va sifatli o'rganish makoni.</p>
+        <small>© 2026 Toxa (qodirovtoirbektts-jpg). Barcha huquqlar himoyalangan.</small>
+      </div>
+      <div>
+        <h4>Kurslar</h4>
+        <a href="#courses">Frontend</a>
+        <a href="#courses">Sun'iy Intellekt</a>
+        <a href="#courses">UI/UX Dizayn</a>
+      </div>
+      <div>
+        <h4>Bog'lanish</h4>
+        <p>Toshkent, IT Park Rezidensiyasi</p>
+        <p>info@toxa-talim.uz</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-edu" id="eduToast">Muvaffaqiyatli</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
